@@ -1,0 +1,57 @@
+.principal{
+ background-image: url(https://i.pinimg.com/originals/4a/e6/27/4ae62766ba7ceb08ea0128b0f4a4953b.png);
+ background-size: cover;
+ background-color: rgb(163, 199, 187);
+ height: 100vh
+}
+
+.divCadastraPlanta{
+    background-color: rgb(166, 216, 166) ;
+    width: 90vw;
+    max-width: 500px;
+    padding:50px 0px 30px 0px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+#formCadastraPlanta {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    gap: 20px;
+}
+
+.divDados{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    justify-content: center;
+}
+
+.paragrafoPlanta{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campoLabel{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.botaoPlanta{
+    background-color: rgb(95, 187, 95);
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+}

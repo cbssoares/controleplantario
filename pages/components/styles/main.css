@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --fonte1: 'Roboto', sans-serif;
+}
+
+
+/* Sessão principal */
+.principal{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    font-family: var(--fonte1);
+    position: absolute;
+   
+
+}
+
+/* area onde fica a caixa de pesquisa */
+.divPesquisa{
+    padding: 20px;
+    background-color: rgb(77, 216, 77);
+    width: calc(100% - 40px);
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.363)
+}
+
+
+.botaoPlanta{
+    background-color: rgb(95, 187, 95);
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 3px 10px;
+}
+
+
+
+/* Caixa de pesquisa */
+.pesquisa{
+    width: 300px;
+    padding: 4px 0px;
+}
+
+
+/* Div onde ficam os cards de plantas */
+#bloco-plantas{
+    margin: 0px auto;
+    padding-top: 10px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: scroll;
+    justify-content: center;
+    background: url(https://i.pinimg.com/originals/4a/e6/27/4ae62766ba7ceb08ea0128b0f4a4953b.png) rgb(166, 216, 166) ;
+    background-size: 250px;
+    gap: 1.8vw;
+    
+}
+
+/* Card de plantas */
+.divPlanta{
+    display: flex ;
+    flex-flow: column;
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+    margin: 10px;
+    justify-content: top;
+    align-items: center;
+    width: 200px;
+    max-height: 375px;
+    gap: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.363);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+
+.icones{
+    font-size: 1.3rem !important;
+    outline: black;
+    text-decoration: dashed black 50px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.116);
+    cursor: pointer;
+    position: relative;
+    display: none;
+    color: rgb(52, 52, 184);
+    align-self: flex-end ;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.705);
+}
+
+.icones:hover {
+    color: blue;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.116);
+}
+
+.iconeOption{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    align-self: flex-end;
+    font-size:  1.3rem !important;
+    color: rgb(92, 197, 92) ;
+    outline: rgba(0, 0, 0, 0.288) solid 2px;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.705);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 20px;
+    padding: 2px;
+    top: 5%;
+    margin-right: 5px;
+}
+
+.iconeOption:hover{
+    color: rgb(45, 226, 45);
+}
+
+.iconeOption .icones{
+    display: none;
+}
+
+.ativo .icones{
+    display: inline-block !important;
+
+}
+
+.iconeX{
+    color: rgb(199, 45, 45);
+    
+}
+
+.iconeX:hover{
+    color: red;
+   
+}
+
+.imagemPlanta{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tituloPlanta{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+strong,.tituloPlanta{
+    text-decoration: underline rgba(0, 0, 0, 0.452) 1.5px ;
+
+}
+
+.iconeApaga{
+    color: rgb(216, 8, 8);
+    display: inline;
+    align-self: flex-end;
+    cursor: pointer;
+   
+}
+.iconeApaga:hover{
+    color: red;
+}
+
+/* formulario para edição de cards */
+#editaBloco{
+    position: relative;
+    width: 300px;
+    background-color: rgb(96, 165, 96);
+    padding: 20px;
+    top: -70vh;
+    margin-bottom: -200px;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.363)
+}
+
+#formEditaBloco{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.divDados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pLabel{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.pInput{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+
+
+
+.invisivel{
+    display: none;
+}
+
+.visivel{
+    display: flex;
+}
+
+
+@media (max-width: 450px) {
+    #bloco-plantas{
+        
+    }
+
+    .divPlanta{
+        width: 43vw;
+        height: max-content;
+    }
+
+    .tituloPlanta{
+        font-size: 1.15em;
+    }
+
+}
