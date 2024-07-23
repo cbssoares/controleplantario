@@ -5,7 +5,7 @@ import {plantas} from './data/plantas'
 // Initializing the cors middleware
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const cors = Cors({
-  methods: ['POST', 'GET', 'PUT'], origin: ['https://cbssoares.github.io', 'http://localhost:3000', 'http://127.0.0.1:5500', 'https://pesquisador-besvbr1sy-cbssoares.vercel.app']
+  methods: ['POST', 'GET', 'PUT'], origin: ['https://cbssoares.github.io', 'http://localhost:3000', 'http://127.0.0.1:5500', 'https://pesquisador-besvbr1sy-cbssoares.vercel.app', 'https://controleplantario.vercel.app/']
 })
 
 // Helper method to wait for a middleware to execute before continuing
@@ -36,13 +36,13 @@ export default async function handler(
   
   // Rest of the API logic
 if (req.method === "GET") {
-  const lista = await fetch("https://getpantry.cloud/apiv1/pantry/ddc41205-af29-4dbf-ada1-f7acca55d4d8/basket/plantas", { method: "GET" })
+  const lista = await fetch("https://getpantry.cloud/apiv1/pantry/ddc41205-af29-4dbf-ada1-f7acca55d4d8/basket/plantario", { method: "GET" })
     const listaAdaptada = await lista.json()
     const listaDados = await listaAdaptada.plantas
     res.status(200).json( await listaDados)
 } else if(req.method === "PUT"){
 
-    fetch("https://getpantry.cloud/apiv1/pantry/ddc41205-af29-4dbf-ada1-f7acca55d4d8/basket/plantas", {
+    fetch("https://getpantry.cloud/apiv1/pantry/ddc41205-af29-4dbf-ada1-f7acca55d4d8/basket/plantario", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'

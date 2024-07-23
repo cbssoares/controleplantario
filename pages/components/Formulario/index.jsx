@@ -72,12 +72,10 @@ export default function Formulario(props) {
                             <input type="radio" name="Estado" id="estadoRuim" />
                             <label htmlFor="estadoRuim">Ruim</label>
                         </div>
-
                         <input type="text" id="formEditaOrigem" name="origem" required />
                         <input type="date" id="formEditaEntrada" name="Entrada" required />
                         <input type="date" id="formEditaSaida" name="Saida" required />
                         <input type="text" id="formEditaDestino" name="Destino" required />
-
                         <input type="url" id="formEditaImage" name="imagem" />
                     </div>
                 </div>

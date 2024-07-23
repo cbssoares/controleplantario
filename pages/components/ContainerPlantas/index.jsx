@@ -21,10 +21,12 @@ export default function ContainerPlantas(props) {
 
             <img className='imagemPlanta' src={props.foto} alt="Imagem da planta"></img>
             <h2 className="tituloPlanta">{props.tipo}</h2>
-            <p><strong>Pote:</strong>{props.pote}</p>
-            <p><strong>Unidade:</strong> {props.unidade}</p>
-            <p><strong>Valor:</strong>{props.preco}</p>
-
+            <p><strong>Disponibilidade:</strong>{props.disponibilidade}</p>
+            <p><strong>Estado</strong> {props.estado}</p>
+            <p><strong>Origem</strong>{props.origem}</p>
+            <p><strong>Data de Entrada</strong>{props.entrada}</p>
+            <p><strong>Data de Saída</strong>{props.saida}</p>
+            <p><strong>Destino</strong>{props.destino}</p>
         </section>
     )
 }
