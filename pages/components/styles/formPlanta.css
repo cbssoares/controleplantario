@@ -6,7 +6,7 @@
 }
 
 .divCadastraPlanta{
-    background-color: rgb(166, 216, 166) ;
+    background-color: rgb(255, 255, 255) ;
     width: 90vw;
     max-width: 500px;
     padding:50px 0px 30px 0px;
@@ -47,7 +47,7 @@
 }
 
 .botaoPlanta{
-    background-color: rgb(95, 187, 95);
+    background-color: rgb(237, 240, 237);
     border: 1px solid rgba(0, 0, 0, 0.329);
     border-radius: 10px;
     cursor: pointer;

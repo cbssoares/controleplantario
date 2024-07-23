@@ -178,11 +178,11 @@ strong,.tituloPlanta{
 /* formulario para edição de cards */
 #editaBloco{
     position: relative;
-    width: 300px;
-    background-color: rgb(96, 165, 96);
-    padding: 20px;
-    top: -70vh;
-    margin-bottom: -200px;
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    top: -90vh;
+    margin-bottom: -400px;
     flex-direction: column;
     border-radius: 20px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.363)

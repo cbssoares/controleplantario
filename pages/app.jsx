@@ -48,19 +48,19 @@ export default function App() {
         const divEditaBloco = document.querySelector("#editaBloco")
         setFuncao(func)
         const form = document.querySelector('#formEditaBloco') 
-        if (func === "edita") { 
-            form.nome.value = inf.tipo
-            form.imagem.value =  inf.foto
-            form.pote.value =  inf.pote
-            form.unidade.value = inf.unidade
-            form.preco.value =  inf.preco
-           } else {
-            form.nome.value = ""
-            form.imagem.value = ""
-            form.pote.value =  ""
-            form.unidade.value = ""
-            form.preco.value =  ""
-           }
+        // if (func === "edita") { 
+        //     form.nome.value = inf.tipo
+        //     form.imagem.value =  inf.foto
+        //     form.pote.value =  inf.pote
+        //     form.unidade.value = inf.unidade
+        //     form.preco.value =  inf.preco
+        //    } else {
+        //     form.nome.value = ""
+        //     form.imagem.value = ""
+        //     form.pote.value =  ""
+        //     form.unidade.value = ""
+        //     form.preco.value =  ""
+        //    }
          
         divEditaBloco.classList.remove('invisivel')
        
