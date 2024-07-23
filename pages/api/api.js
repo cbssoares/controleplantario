@@ -1,5 +1,5 @@
 const listaDePlantas = (async () => {
-    const lista = await fetch("https://pesquisador-seven.vercel.app/api/tempo", { method: "GET"})
+    const lista = await fetch("https://controleplantario.vercel.app/api/tempo", { method: "GET"})
     const listaAdaptada = await lista.json()
     var listaDados =  await listaAdaptada
     console.log(await listaDados)
@@ -8,7 +8,7 @@ const listaDePlantas = (async () => {
 })
 
 const atualizaLista = (listaAtualizada) => {
-    fetch("https://pesquisador-seven.vercel.app/api/tempo", {
+    fetch("https://controleplantario.vercel.app/api/tempo", {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json',
