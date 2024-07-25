@@ -1,3 +1,5 @@
+
+
 export default function Formulario(props) {
     return (
         <div id="editaBloco" className="invisivel" >
@@ -9,6 +11,7 @@ export default function Formulario(props) {
                 if (props.func === "edita") {
                     const list = props.Listap
                     console.log(list[props.info.chave])
+                    list[props.info.chave].imagem = form.target.imagem.value
                     list[props.info.chave].Tipo = form.target.nome.value
                     list[props.info.chave].disponibilidade = form.target.disponibilidade.value
                     list[props.info.chave].estado = form.target.estado.value
@@ -84,7 +87,7 @@ export default function Formulario(props) {
                         <input type="date" id="formEditaEntrada" name="entrada" required />
                         <input type="date" id="formEditaSaida" name="saida"  required />
                         <input type="text" id="formEditaDestino" name="destino" required />
-                        <input type="url" id="formEditaImage" name="imagem" />
+                        <input type="file" id="formEditaImage" name="imagem" />
                     </div>
                 </div>
                 <input type="submit" value="Concluido" className="botaoPlanta" />
