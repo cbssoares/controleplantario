@@ -61,8 +61,7 @@
     flex-flow: row wrap;
     overflow: scroll;
     justify-content: center;
-    background: url(https://i.pinimg.com/originals/4a/e6/27/4ae62766ba7ceb08ea0128b0f4a4953b.png) rgb(166, 216, 166) ;
-    background-size: 250px;
+    background-color: rgb(219, 218, 218) ;
     gap: 1.8vw;
     
 }
@@ -71,17 +70,17 @@
 .divPlanta{
     display: flex ;
     flex-flow: column;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(238, 238, 238);
     border-radius: 10px;
     margin: 10px;
     justify-content: top;
     align-items: center;
-    width: 200px;
-    max-height: 375px;
+    width: 230px;
+    max-height: 400px;
     gap: 10px;
     font-size: 1rem;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.363);
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     position: relative;
 }
 
@@ -175,6 +174,8 @@ strong,.tituloPlanta{
     color: red;
 }
 
+
+
 /* formulario para edição de cards */
 #editaBloco{
     position: relative;
@@ -229,9 +230,7 @@ strong,.tituloPlanta{
 
 
 @media (max-width: 450px) {
-    #bloco-plantas{
-        
-    }
+    
 
     .divPlanta{
         width: 43vw;

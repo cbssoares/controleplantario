@@ -10,25 +10,33 @@ export default function Formulario(props) {
                     const list = props.Listap
                     console.log(list[props.info.chave])
                     list[props.info.chave].Tipo = form.target.nome.value
-                    list[props.info.chave].Pote = form.target.pote.value
-                    list[props.info.chave].Unidade = form.target.unidade.value
-                    list[props.info.chave].Preço = form.target.preco.value
-                    list[props.info.chave].imagem = form.target.imagem.value
+                    list[props.info.chave].disponibilidade = form.target.disponibilidade.value
+                    list[props.info.chave].estado = form.target.estado.value
+                    list[props.info.chave].origem= form.target.origem.value
+                    list[props.info.chave].entrada = form.target.entrada.value
+                    list[props.info.chave].saida = form.target.saida.value
+                    list[props.info.chave].destino = form.target.destino.value
                     props.enviaLista(list)
                     props.fechaFormulario()
                 } else {
                     let imagem = form.target.imagem.value
                     let nome = form.target.nome.value
-                    let pote = form.target.pote.value
-                    let unidade = form.target.unidade.value
-                    let preco = form.target.preco.value
+                    let disponibilidade = form.target.disponibilidade.value
+                    let estado = form.target.estado.value
+                    let origem = form.target.origem.value
+                    let entrada = form.target.entrada.value
+                    let saida = form.target.saida.value
+                    let destino = form.target.destino.value
                     const listaNova = props.Listap
                     const novaPlanta = {
                         imagem: imagem,
                         Tipo: nome,
-                        Pote: pote,
-                        Unidade: unidade,
-                        Preço: preco
+                        disponibilidade: disponibilidade,
+                        estado: estado,
+                        origem: origem,
+                        entrada: entrada,
+                        saida: saida,
+                        destino: destino
                     }
                     listaNova.push(novaPlanta)
                     listaNova.sort(function (a, b) {
@@ -62,20 +70,20 @@ export default function Formulario(props) {
                     <div className="pInput">
                         <input type="text" name="nome" id="formEditaNome" required />
                         <input type="text" name="disponibilidade" id="formEditaDisponibilidade" required />
-                        <div id="formEditaEstado">
-                            <input type="radio" name="Estado" id="estadoBom" />
+                        <div id="formEditaEstado" name= "estado">
+                            <input type="radio" name="estado" id="estadoBom" value="Bom" />
                             <label htmlFor="estadoBom">Bom</label>
 
-                            <input type="radio" name="Estado" id="estadoRazoavel" />
+                            <input type="radio" name="estado" id="estadoRazoavel"  value="Razoavel"/>
                             <label htmlFor="estadoRazoavel">Razoavel</label>
 
-                            <input type="radio" name="Estado" id="estadoRuim" />
+                            <input type="radio" name="estado" id="estadoRuim" value= "Ruim" />
                             <label htmlFor="estadoRuim">Ruim</label>
                         </div>
                         <input type="text" id="formEditaOrigem" name="origem" required />
-                        <input type="date" id="formEditaEntrada" name="Entrada" required />
-                        <input type="date" id="formEditaSaida" name="Saida" required />
-                        <input type="text" id="formEditaDestino" name="Destino" required />
+                        <input type="date" id="formEditaEntrada" name="entrada" required />
+                        <input type="date" id="formEditaSaida" name="saida"  required />
+                        <input type="text" id="formEditaDestino" name="destino" required />
                         <input type="url" id="formEditaImage" name="imagem" />
                     </div>
                 </div>

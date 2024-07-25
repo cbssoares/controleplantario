@@ -13,7 +13,7 @@ export default function ContainerPlantas(props) {
                 <span className="material-symbols-outlined icones iconeEdit" onClick={(e) => {
                     console.log(props)
                     const identificador = e.target.parentNode
-                    props.recebeInformacao(props.foto, props.tipo, props.pote, props.unidade, props.preco, props.chave, "edita", identificador.parentNode.dataset.chave)
+                    props.recebeInformacao(props.foto, props.tipo, props.disponibilidade, props.estado, props.origem, props.entrada, props.saida, props.destino, props.chave, "edita", )
                 }} >
                     edit
                 </span>
@@ -21,12 +21,12 @@ export default function ContainerPlantas(props) {
 
             <img className='imagemPlanta' src={props.foto} alt="Imagem da planta"></img>
             <h2 className="tituloPlanta">{props.tipo}</h2>
-            <p><strong>Disponibilidade:</strong>{props.disponibilidade}</p>
-            <p><strong>Estado</strong> {props.estado}</p>
-            <p><strong>Origem</strong>{props.origem}</p>
-            <p><strong>Data de Entrada</strong>{props.entrada}</p>
-            <p><strong>Data de Saída</strong>{props.saida}</p>
-            <p><strong>Destino</strong>{props.destino}</p>
+            <p><strong>Disponibilidade:</strong> {props.disponibilidade}</p>
+            <p><strong>Estado:</strong> {props.estado}</p>
+            <p><strong>Origem:</strong> {props.origem}</p>
+            <p><strong>Data de Entrada:</strong> {props.entrada}</p>
+            <p><strong>Data de Saída:</strong> {props.saida}</p>
+            <p><strong>Destino:</strong> {props.destino}</p>
         </section>
     )
 }
