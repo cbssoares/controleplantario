@@ -72,8 +72,15 @@ export default function Formulario(props) {
                     </div>
                     <div className="pInput">
                         <input type="text" name="nome" id="formEditaNome" required />
-                        <input type="text" name="disponibilidade" id="formEditaDisponibilidade" required />
-                        <div id="formEditaEstado" name= "estado">
+                        <div id="formEditaDisponibilidade" name="disponibilidade">
+                            <input type="radio" name="disponibilidade" id="opDisponivel" value="Disponivel"/>
+                            <label htmlFor="opDisponivel">Disponivel</label>
+
+                            <input type="radio" name="disponibilidade" id="opIndisponivel" value="Indisponivel" />
+                            <label htmlFor="opIndisponivel"> Indisponivel</label>
+                        </div>
+
+                        <div id="formEditaEstado" name= "estado" required>
                             <input type="radio" name="estado" id="estadoBom" value="Bom" />
                             <label htmlFor="estadoBom">Bom</label>
 
@@ -87,7 +94,7 @@ export default function Formulario(props) {
                         <input type="date" id="formEditaEntrada" name="entrada" required />
                         <input type="date" id="formEditaSaida" name="saida"  required />
                         <input type="text" id="formEditaDestino" name="destino" required />
-                        <input type="file" id="formEditaImage" name="imagem" />
+                        <input type="url" id="formEditaImage" name="imagem" />
                     </div>
                 </div>
                 <input type="submit" value="Concluido" className="botaoPlanta" />
